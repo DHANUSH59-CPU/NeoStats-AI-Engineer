@@ -1,0 +1,19 @@
+# Keep the image small: dataset, venvs, caches, and large generated files are
+# mounted at runtime, not copied into the image.
+data/
+models/*.db
+models/*.png
+.venv/
+venv/
+env/
+__pycache__/
+*.pyc
+.git/
+.gitignore
+.ipynb_checkpoints/
+notebooks/*.ipynb
+documents/
+*.md
+.env
+.claude/
+NeoStats_AI_Use_Case.pdf

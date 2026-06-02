@@ -1,0 +1,40 @@
+# ---- Data (large, not committed; mounted into container) ----
+data/
+
+# ---- Secrets ----
+.env
+
+# ---- Model artifacts (large / regenerable) ----
+# We DO commit the final model.pkl so `docker-compose up` works without training.
+# Everything else under models/ is regenerable.
+models/*.db
+models/*.png
+*.db
+
+# ---- Python ----
+__pycache__/
+*.py[cod]
+*.egg-info/
+.ipynb_checkpoints/
+.venv/
+venv/
+env/
+
+# ---- Logs ----
+*.log
+
+# ---- OS / editor ----
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+.claude/
+scripts/
+
+# ---- Assignment / local tooling ----
+NeoStats_AI_Use_Case.pdf
+documents/ui/
+
+# ---- IDE ----
+.cursor/

@@ -1,0 +1,26 @@
+# ---- Core data / ML ----
+pandas==2.2.3
+numpy==2.2.6
+scikit-learn==1.5.2
+lightgbm==4.5.0
+shap==0.46.0
+joblib==1.5.2
+
+# ---- Plotting (EDA + saved charts) ----
+matplotlib==3.10.9
+seaborn==0.13.2
+
+# ---- API / web ----
+fastapi==0.115.5
+uvicorn[standard]==0.32.1
+pydantic==2.9.2
+python-multipart==0.0.12
+
+# ---- Talk-to-data (LLM) ----
+# We only import `langchain_google_genai`; it pulls a compatible langchain-core
+# automatically. (Pinning langchain/-core/-community separately caused a clean-install
+# dependency conflict, so they're intentionally omitted.)
+langchain-google-genai==2.1.12
+
+# ---- Config / utils ----
+python-dotenv==1.0.1

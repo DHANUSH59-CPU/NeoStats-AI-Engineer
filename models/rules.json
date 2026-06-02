@@ -1,0 +1,212 @@
+{
+  "base_default_rate": 0.0807,
+  "features_used": [
+    "EXT_SOURCE_1",
+    "EXT_SOURCE_2",
+    "EXT_SOURCE_3",
+    "CREDIT_INCOME_RATIO",
+    "ANNUITY_INCOME_RATIO",
+    "CREDIT_TERM",
+    "AGE_YEARS",
+    "YEARS_EMPLOYED",
+    "AMT_CREDIT",
+    "AMT_INCOME_TOTAL"
+  ],
+  "n_rules": 15,
+  "rules": [
+    {
+      "conditions": [
+        "EXT_SOURCE_3 <= 0.315",
+        "EXT_SOURCE_2 <= 0.380",
+        "EXT_SOURCE_2 <= 0.080"
+      ],
+      "rule": "EXT_SOURCE_3 <= 0.315 AND EXT_SOURCE_2 <= 0.380 AND EXT_SOURCE_2 <= 0.080",
+      "support": 2079,
+      "default_rate": 0.3761,
+      "risk_band": "High",
+      "lift": 4.66
+    },
+    {
+      "conditions": [
+        "EXT_SOURCE_3 <= 0.315",
+        "EXT_SOURCE_2 <= 0.380",
+        "EXT_SOURCE_2 > 0.080",
+        "EXT_SOURCE_3 <= 0.146"
+      ],
+      "rule": "EXT_SOURCE_3 <= 0.315 AND EXT_SOURCE_2 <= 0.380 AND EXT_SOURCE_2 > 0.080 AND EXT_SOURCE_3 <= 0.146",
+      "support": 2845,
+      "default_rate": 0.3142,
+      "risk_band": "High",
+      "lift": 3.89
+    },
+    {
+      "conditions": [
+        "EXT_SOURCE_3 <= 0.315",
+        "EXT_SOURCE_2 > 0.380",
+        "EXT_SOURCE_3 <= 0.140",
+        "EXT_SOURCE_2 <= 0.633"
+      ],
+      "rule": "EXT_SOURCE_3 <= 0.315 AND EXT_SOURCE_2 > 0.380 AND EXT_SOURCE_3 <= 0.140 AND EXT_SOURCE_2 <= 0.633",
+      "support": 4405,
+      "default_rate": 0.2293,
+      "risk_band": "High",
+      "lift": 2.84
+    },
+    {
+      "conditions": [
+        "EXT_SOURCE_3 > 0.315",
+        "EXT_SOURCE_2 <= 0.391",
+        "EXT_SOURCE_3 <= 0.542",
+        "EXT_SOURCE_2 <= 0.153"
+      ],
+      "rule": "EXT_SOURCE_3 > 0.315 AND EXT_SOURCE_2 <= 0.391 AND EXT_SOURCE_3 <= 0.542 AND EXT_SOURCE_2 <= 0.153",
+      "support": 9024,
+      "default_rate": 0.2169,
+      "risk_band": "High",
+      "lift": 2.69
+    },
+    {
+      "conditions": [
+        "EXT_SOURCE_3 <= 0.315",
+        "EXT_SOURCE_2 <= 0.380",
+        "EXT_SOURCE_2 > 0.080",
+        "EXT_SOURCE_3 > 0.146"
+      ],
+      "rule": "EXT_SOURCE_3 <= 0.315 AND EXT_SOURCE_2 <= 0.380 AND EXT_SOURCE_2 > 0.080 AND EXT_SOURCE_3 > 0.146",
+      "support": 7893,
+      "default_rate": 0.2122,
+      "risk_band": "High",
+      "lift": 2.63
+    },
+    {
+      "conditions": [
+        "EXT_SOURCE_3 <= 0.315",
+        "EXT_SOURCE_2 > 0.380",
+        "EXT_SOURCE_3 <= 0.140",
+        "EXT_SOURCE_2 > 0.633"
+      ],
+      "rule": "EXT_SOURCE_3 <= 0.315 AND EXT_SOURCE_2 > 0.380 AND EXT_SOURCE_3 <= 0.140 AND EXT_SOURCE_2 > 0.633",
+      "support": 2542,
+      "default_rate": 0.1389,
+      "risk_band": "Medium",
+      "lift": 1.72
+    },
+    {
+      "conditions": [
+        "EXT_SOURCE_3 > 0.315",
+        "EXT_SOURCE_2 > 0.391",
+        "EXT_SOURCE_3 > 0.536",
+        "EXT_SOURCE_2 > 0.625"
+      ],
+      "rule": "EXT_SOURCE_3 > 0.315 AND EXT_SOURCE_2 > 0.391 AND EXT_SOURCE_3 > 0.536 AND EXT_SOURCE_2 > 0.625",
+      "support": 49031,
+      "default_rate": 0.0244,
+      "risk_band": "Low",
+      "lift": 0.3
+    },
+    {
+      "conditions": [
+        "EXT_SOURCE_3 > 0.315",
+        "EXT_SOURCE_2 <= 0.391",
+        "EXT_SOURCE_3 > 0.542",
+        "EXT_SOURCE_2 <= 0.131"
+      ],
+      "rule": "EXT_SOURCE_3 > 0.315 AND EXT_SOURCE_2 <= 0.391 AND EXT_SOURCE_3 > 0.542 AND EXT_SOURCE_2 <= 0.131",
+      "support": 4145,
+      "default_rate": 0.1281,
+      "risk_band": "Medium",
+      "lift": 1.59
+    },
+    {
+      "conditions": [
+        "EXT_SOURCE_3 <= 0.315",
+        "EXT_SOURCE_2 > 0.380",
+        "EXT_SOURCE_3 > 0.140",
+        "EXT_SOURCE_1 <= 0.527"
+      ],
+      "rule": "EXT_SOURCE_3 <= 0.315 AND EXT_SOURCE_2 > 0.380 AND EXT_SOURCE_3 > 0.140 AND EXT_SOURCE_1 <= 0.527",
+      "support": 19840,
+      "default_rate": 0.128,
+      "risk_band": "Medium",
+      "lift": 1.59
+    },
+    {
+      "conditions": [
+        "EXT_SOURCE_3 > 0.315",
+        "EXT_SOURCE_2 <= 0.391",
+        "EXT_SOURCE_3 <= 0.542",
+        "EXT_SOURCE_2 > 0.153"
+      ],
+      "rule": "EXT_SOURCE_3 > 0.315 AND EXT_SOURCE_2 <= 0.391 AND EXT_SOURCE_3 <= 0.542 AND EXT_SOURCE_2 > 0.153",
+      "support": 27967,
+      "default_rate": 0.1266,
+      "risk_band": "Medium",
+      "lift": 1.57
+    },
+    {
+      "conditions": [
+        "EXT_SOURCE_3 > 0.315",
+        "EXT_SOURCE_2 > 0.391",
+        "EXT_SOURCE_3 > 0.536",
+        "EXT_SOURCE_2 <= 0.625"
+      ],
+      "rule": "EXT_SOURCE_3 > 0.315 AND EXT_SOURCE_2 > 0.391 AND EXT_SOURCE_3 > 0.536 AND EXT_SOURCE_2 <= 0.625",
+      "support": 47820,
+      "default_rate": 0.0412,
+      "risk_band": "Low",
+      "lift": 0.51
+    },
+    {
+      "conditions": [
+        "EXT_SOURCE_3 > 0.315",
+        "EXT_SOURCE_2 > 0.391",
+        "EXT_SOURCE_3 <= 0.536",
+        "EXT_SOURCE_2 > 0.617"
+      ],
+      "rule": "EXT_SOURCE_3 > 0.315 AND EXT_SOURCE_2 > 0.391 AND EXT_SOURCE_3 <= 0.536 AND EXT_SOURCE_2 > 0.617",
+      "support": 50070,
+      "default_rate": 0.0462,
+      "risk_band": "Low",
+      "lift": 0.57
+    },
+    {
+      "conditions": [
+        "EXT_SOURCE_3 > 0.315",
+        "EXT_SOURCE_2 <= 0.391",
+        "EXT_SOURCE_3 > 0.542",
+        "EXT_SOURCE_2 > 0.131"
+      ],
+      "rule": "EXT_SOURCE_3 > 0.315 AND EXT_SOURCE_2 <= 0.391 AND EXT_SOURCE_3 > 0.542 AND EXT_SOURCE_2 > 0.131",
+      "support": 21654,
+      "default_rate": 0.0668,
+      "risk_band": "Low",
+      "lift": 0.83
+    },
+    {
+      "conditions": [
+        "EXT_SOURCE_3 <= 0.315",
+        "EXT_SOURCE_2 > 0.380",
+        "EXT_SOURCE_3 > 0.140",
+        "EXT_SOURCE_1 > 0.527"
+      ],
+      "rule": "EXT_SOURCE_3 <= 0.315 AND EXT_SOURCE_2 > 0.380 AND EXT_SOURCE_3 > 0.140 AND EXT_SOURCE_1 > 0.527",
+      "support": 5362,
+      "default_rate": 0.0679,
+      "risk_band": "Low",
+      "lift": 0.84
+    },
+    {
+      "conditions": [
+        "EXT_SOURCE_3 > 0.315",
+        "EXT_SOURCE_2 > 0.391",
+        "EXT_SOURCE_3 <= 0.536",
+        "EXT_SOURCE_2 <= 0.617"
+      ],
+      "rule": "EXT_SOURCE_3 > 0.315 AND EXT_SOURCE_2 > 0.391 AND EXT_SOURCE_3 <= 0.536 AND EXT_SOURCE_2 <= 0.617",
+      "support": 52834,
+      "default_rate": 0.0805,
+      "risk_band": "Low",
+      "lift": 1.0
+    }
+  ]
+}

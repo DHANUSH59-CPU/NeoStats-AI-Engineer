@@ -1,0 +1,26 @@
+# Run the whole platform with:  docker-compose up --build
+# Then open http://localhost:8000
+services:
+  app:
+    build: .
+    image: credit-risk-platform:latest
+    container_name: credit-risk-app
+    ports:
+      - "8000:8000"
+    environment:
+      # Docker Compose automatically reads .env if present. Defaults keep the
+      # app runnable even when a fresh clone has not created one yet.
+      GOOGLE_API_KEY: ${GOOGLE_API_KEY:-}
+      GEMINI_MODEL: ${GEMINI_MODEL:-gemini-flash-latest}
+      # Paths inside the container (data & models are mounted below).
+      DATA_DIR: ${DATA_DIR:-data/home-credit-default-risk}
+      MODEL_PATH: ${MODEL_PATH:-models/model.pkl}
+      DB_PATH: ${DB_PATH:-models/credit.db}
+      APP_PORT: ${APP_PORT:-8000}
+      SQL_ROW_LIMIT: ${SQL_ROW_LIMIT:-100}
+    volumes:
+      # Mount the dataset (read-only) — NOT baked into the image.
+      - ./data:/app/data:ro
+      # Persist generated artifacts (DB, model, summaries) across restarts.
+      - ./models:/app/models
+    restart: unless-stopped

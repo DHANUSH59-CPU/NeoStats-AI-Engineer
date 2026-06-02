@@ -1,0 +1,247 @@
+{
+  "summary": {
+    "n_rows": 307511,
+    "n_cols": 122,
+    "n_numeric": 106,
+    "n_categorical": 16,
+    "default_rate_pct": 8.07,
+    "target_counts": {
+      "repaid": 282686,
+      "defaulted": 24825
+    }
+  },
+  "data_quality": {
+    "columns_with_missing": 64,
+    "top_missing": [
+      {
+        "column": "COMMONAREA_AVG",
+        "missing_pct": 69.87
+      },
+      {
+        "column": "COMMONAREA_MODE",
+        "missing_pct": 69.87
+      },
+      {
+        "column": "COMMONAREA_MEDI",
+        "missing_pct": 69.87
+      },
+      {
+        "column": "NONLIVINGAPARTMENTS_MEDI",
+        "missing_pct": 69.43
+      },
+      {
+        "column": "NONLIVINGAPARTMENTS_MODE",
+        "missing_pct": 69.43
+      },
+      {
+        "column": "NONLIVINGAPARTMENTS_AVG",
+        "missing_pct": 69.43
+      },
+      {
+        "column": "FONDKAPREMONT_MODE",
+        "missing_pct": 68.39
+      },
+      {
+        "column": "LIVINGAPARTMENTS_AVG",
+        "missing_pct": 68.35
+      },
+      {
+        "column": "LIVINGAPARTMENTS_MEDI",
+        "missing_pct": 68.35
+      },
+      {
+        "column": "LIVINGAPARTMENTS_MODE",
+        "missing_pct": 68.35
+      },
+      {
+        "column": "FLOORSMIN_MODE",
+        "missing_pct": 67.85
+      },
+      {
+        "column": "FLOORSMIN_AVG",
+        "missing_pct": 67.85
+      },
+      {
+        "column": "FLOORSMIN_MEDI",
+        "missing_pct": 67.85
+      },
+      {
+        "column": "YEARS_BUILD_AVG",
+        "missing_pct": 66.5
+      },
+      {
+        "column": "YEARS_BUILD_MODE",
+        "missing_pct": 66.5
+      }
+    ],
+    "days_employed_anomaly_pct": 18.01,
+    "notes": [
+      "DAYS_EMPLOYED uses 365243 as a sentinel for 'not employed' (pensioners).",
+      "All DAYS_* columns are negative (days before the application date).",
+      "EXT_SOURCE_1 is missing for ~56% of rows but is highly predictive."
+    ]
+  },
+  "feature_groups": {
+    "demographics": [
+      "CODE_GENDER",
+      "DAYS_BIRTH",
+      "CNT_CHILDREN",
+      "NAME_FAMILY_STATUS",
+      "CNT_FAM_MEMBERS"
+    ],
+    "financials": [
+      "AMT_INCOME_TOTAL",
+      "AMT_CREDIT",
+      "AMT_ANNUITY",
+      "AMT_GOODS_PRICE",
+      "NAME_INCOME_TYPE"
+    ],
+    "employment_education": [
+      "DAYS_EMPLOYED",
+      "OCCUPATION_TYPE",
+      "ORGANIZATION_TYPE",
+      "NAME_EDUCATION_TYPE"
+    ],
+    "external_scores": [
+      "EXT_SOURCE_1",
+      "EXT_SOURCE_2",
+      "EXT_SOURCE_3"
+    ],
+    "housing": [
+      "NAME_HOUSING_TYPE",
+      "FLAG_OWN_REALTY",
+      "FLAG_OWN_CAR"
+    ]
+  },
+  "insights": {
+    "default_rate_by_education": [
+      {
+        "category": "Lower secondary",
+        "default_rate_pct": 10.93,
+        "n": 3816
+      },
+      {
+        "category": "Secondary / secondary special",
+        "default_rate_pct": 8.94,
+        "n": 218391
+      },
+      {
+        "category": "Incomplete higher",
+        "default_rate_pct": 8.48,
+        "n": 10277
+      },
+      {
+        "category": "Higher education",
+        "default_rate_pct": 5.36,
+        "n": 74863
+      },
+      {
+        "category": "Academic degree",
+        "default_rate_pct": 1.83,
+        "n": 164
+      }
+    ],
+    "default_rate_by_income_type": [
+      {
+        "category": "Working",
+        "default_rate_pct": 9.59,
+        "n": 158774
+      },
+      {
+        "category": "Commercial associate",
+        "default_rate_pct": 7.48,
+        "n": 71617
+      },
+      {
+        "category": "State servant",
+        "default_rate_pct": 5.75,
+        "n": 21703
+      },
+      {
+        "category": "Pensioner",
+        "default_rate_pct": 5.39,
+        "n": 55362
+      }
+    ],
+    "default_rate_by_gender": [
+      {
+        "category": "M",
+        "default_rate_pct": 10.14,
+        "n": 105059
+      },
+      {
+        "category": "F",
+        "default_rate_pct": 7.0,
+        "n": 202448
+      },
+      {
+        "category": "XNA",
+        "default_rate_pct": 0.0,
+        "n": 4
+      }
+    ],
+    "default_rate_by_age_band": [
+      {
+        "category": "20-30",
+        "default_rate_pct": 11.44,
+        "n": 45186
+      },
+      {
+        "category": "30-40",
+        "default_rate_pct": 9.59,
+        "n": 82349
+      },
+      {
+        "category": "40-50",
+        "default_rate_pct": 7.64,
+        "n": 76581
+      },
+      {
+        "category": "50-60",
+        "default_rate_pct": 6.12,
+        "n": 68109
+      },
+      {
+        "category": "60+",
+        "default_rate_pct": 4.92,
+        "n": 35286
+      }
+    ],
+    "default_rate_by_contract": [
+      {
+        "category": "Cash loans",
+        "default_rate_pct": 8.35,
+        "n": 278232
+      },
+      {
+        "category": "Revolving loans",
+        "default_rate_pct": 5.48,
+        "n": 29279
+      }
+    ],
+    "default_rate_by_car_ownership": [
+      {
+        "category": "N",
+        "default_rate_pct": 8.5,
+        "n": 202924
+      },
+      {
+        "category": "Y",
+        "default_rate_pct": 7.24,
+        "n": 104587
+      }
+    ],
+    "ext_source_target_corr": {
+      "EXT_SOURCE_2": -0.1605,
+      "EXT_SOURCE_3": -0.1789
+    }
+  },
+  "key_findings": [
+    "Only 8.07% of applicants default \u2014 a heavily imbalanced problem.",
+    "Lower education (Lower secondary) defaults ~10.9% vs ~5% for higher education.",
+    "Younger applicants (20-30) default markedly more than 50-60+ groups.",
+    "External scores are the strongest signals (EXT_SOURCE_2 corr=-0.16 with default).",
+    "Low-skill Laborers and Drivers have the highest occupation default rates (>13%).",
+    "DAYS_EMPLOYED has a 18.01% sentinel anomaly (pensioners)."
+  ]
+}
