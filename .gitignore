@@ -1,5 +1,5 @@
 # ---- Data (large, not committed; mounted into container) ----
-data/
+/data/
 
 # ---- Secrets ----
 .env

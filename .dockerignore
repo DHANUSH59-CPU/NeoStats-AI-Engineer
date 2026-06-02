@@ -1,6 +1,6 @@
 # Keep the image small: dataset, venvs, caches, and large generated files are
 # mounted at runtime, not copied into the image.
-data/
+/data/
 models/*.db
 models/*.png
 .venv/
